@@ -4,6 +4,7 @@ import morgan from 'morgan'
 import path from 'path'
 import './database'
 
+
 const app = express()
 app.set('port', process.env.PORT || 4000)
 
@@ -26,3 +27,4 @@ app.use(express.static(path.join(__dirname, '../public')))
 app.get('/', (req, res) => {
   res.send('hola desde el banckend en la peticion get')
 })
+
