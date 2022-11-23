@@ -3,7 +3,10 @@ import cors from 'cors'
 import morgan from 'morgan'
 import path from 'path'
 import './database'
+import authRouter from './routes/usuario.routes'
+import * as dotenv from 'dotenv'
 
+dotenv.config();
 
 const app = express()
 app.set('port', process.env.PORT || 4000)
@@ -24,7 +27,11 @@ app.use(morgan('dev'))
 app.use(express.static(path.join(__dirname, '../public')))
 
 //rutas
-app.get('/', (req, res) => {
-  res.send('hola desde el banckend en la peticion get')
-})
+// app.get('/', (req, res) => {
+//   res.send('hola desde el banckend en la peticion get')
+// })
+
+// http://localhost:4000/rollingYa/auth/
+app.use('/rollingYa/auth',authRouter)
+
 

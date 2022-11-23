@@ -20,8 +20,14 @@ const usuarioSchema = new Schema({
     maxlength: 15,
     required: true,
   },
+  perfil: {
+    type: String,
+  },
+  estado: {
+    type: String,
+  },
 })
 
-const Usuario = mongoose.model('usuario', usuarioSchema);
+const Usuario = mongoose.model('usuario', usuarioSchema)
 
-export default Usuario;
+export default Usuario
