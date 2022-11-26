@@ -3,7 +3,7 @@ import cors from 'cors'
 import morgan from 'morgan'
 import path from 'path'
 import './database'
-import authRouter from './routes/usuario.routes'
+import usuariosRouter from './routes/usuario.routes'
 import * as dotenv from 'dotenv'
 
 dotenv.config();
@@ -32,6 +32,6 @@ app.use(express.static(path.join(__dirname, '../public')))
 // })
 
 // http://localhost:4000/rollingYa/auth/
-app.use('/rollingYa/auth',authRouter)
+app.use('/rolling-ya/usuarios',usuariosRouter)
 
 

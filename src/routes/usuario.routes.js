@@ -5,7 +5,7 @@ import { crearUsuario, login } from '../controllers/usuario'
 const router = Router()
 
 router
-  .route('/')
+  .route('/usuarios')
   .post(
     [
       check('email', 'El email es obligatorio').isEmail(),
